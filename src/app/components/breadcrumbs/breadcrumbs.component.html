@@ -1,0 +1,7 @@
+<div class="breadcrumb" style="margin-top:-10px !important">
+    <mat-icon class="icon" [routerLink]="'..'">home</mat-icon>
+    <div *ngFor="let crumb of crumbs">
+        <mat-icon class="sub-icon">arrow_forward_ios</mat-icon>
+        <p [routerLink]="crumb.route">{{crumb.name}}</p>
+    </div>
+</div>

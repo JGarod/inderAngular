@@ -1,0 +1,127 @@
+<div id="space" class="space">
+    hola
+</div>
+<div class="content">
+    <div class="fondo">
+        <div class="imagen"></div>
+        <div class="negro"></div>
+        <div class="descripcion">
+            <h1>PQRSD</h1>
+        </div>
+    </div>
+    <div class="contenido">
+        <div class="breadcrump">
+            <a routerLink="..">Inicio</a>
+            <p>></p>
+            <p>PQRSD</p>
+        </div>
+        <form>
+            <p>Los campos marcados con <strong style="color:red;">*</strong> son obligatorios</p>
+            <label>Seleccione la opción PQRSD</label>
+            <br>
+            <mat-form-field appearance="outline">
+                <mat-label>Seleccione la opción</mat-label>
+                <mat-select>
+                    <mat-option>Petición</mat-option>
+                    <mat-option>Queja/Reclamo</mat-option>
+                    <mat-option>Solicitud de información</mat-option>
+                    <mat-option>Denuncia</mat-option>
+                    <mat-option>Sugerencia/propuesta</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <label>Nombres y apellidos/razón social de la persona/entidad que interpone la solicitud <strong
+                    style="color:red;">*</strong></label>
+            <br>
+            <mat-form-field appearance="outline">
+                <input matInput type="text"
+                    placeholder="Nombres y apellidos/razón social de la persona/entidad que interpone la solicitud ">
+            </mat-form-field>
+
+            <label>Tipo de documento de identidad de la persona, empresa o entidad que interpone la solicitud <strong
+                    style="color:red;">*</strong></label>
+            <br>
+            <mat-form-field appearance="outline">
+                <mat-label>Seleccione la opción</mat-label>
+                <mat-select>
+                    <mat-option>Cedula de ciudadanía</mat-option>
+                    <mat-option>NUIP. Número único de identificación Personal</mat-option>
+                    <mat-option>Cedula de extranjería</mat-option>
+                    <mat-option>NIT</mat-option>
+                    <mat-option>Pasaporte</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <label>Texto de una sola Número del documento de identidad de la persona, empresa o entidad que interpone
+                la solicitud <strong style="color:red;">*</strong></label>
+            <br>
+            <mat-form-field appearance="outline">
+                <input matInput type="text"
+                    placeholder="Número de documento de identidad de la persona, empresa o entidad que interpone la solicitud ">
+            </mat-form-field>
+
+            <label>¿Desea recibir la respuesta por correo electrónico o en la dirección de correspondencia?</label>
+            <br>
+            <mat-radio-group style="display:flex;flex-direction:column;gap:5px;">
+                <mat-radio-button value="1">Correo electronico</mat-radio-button>
+                <mat-radio-button value="2">Dirección de corresponencia</mat-radio-button>
+            </mat-radio-group>
+            <br>
+            <label>Correo electronico <strong style="color:red;">*</strong></label>
+            <br>
+            <mat-form-field appearance="outline">
+                <input matInput type="text" placeholder="Correo electronico">
+            </mat-form-field>
+            <hr>
+            <label>Dirección de correspondencia</label>
+            <br><br>
+            <label>Dirección <strong style="color:red;">*</strong></label>
+            <br>
+            <mat-form-field appearance="outline">
+                <input matInput type="text" placeholder="Dirección">
+            </mat-form-field>
+            <label>Barrio/vereda/corregimiento <strong style="color:red;">*</strong></label>
+            <br>
+            <mat-form-field appearance="outline">
+                <input matInput type="text" placeholder="Barrio/vereda/corregimiento">
+            </mat-form-field>
+            <label>Municipio/distrito <strong style="color:red;">*</strong></label>
+            <br>
+            <mat-form-field appearance="outline">
+                <input matInput type="text" placeholder="Municiío/distrito">
+            </mat-form-field>
+            <label>País <strong style="color:red;">*</strong></label>
+            <br>
+            <mat-form-field appearance="outline">
+                <input matInput type="text" placeholder="País">
+            </mat-form-field>
+            <hr>
+            <label>Número de contacto <strong style="color:red;">*</strong></label>
+            <br>
+            <mat-form-field appearance="outline">
+                <input matInput type="text" placeholder="Ej. 57 21452671">
+            </mat-form-field>
+            <label>Asunto del PQRSD</label>
+            <br>
+            <mat-form-field appearance="outline">
+                <input matInput type="text" placeholder="Asunto del PQRSD">
+            </mat-form-field>
+            <label>Objeto del PQRSD <strong style="color:red;">*</strong></label>
+            <br>
+            <mat-form-field appearance="outline">
+                <textarea matInput type="text" placeholder="País" cols="4"></textarea>
+            </mat-form-field>
+            <p>Al hacer clic en el botón enviar, usted acepta la remisión de la PQRS a la entidad Indersantander. Sus
+                datos serán recolectados y tratados conforme a la Política de Tratamiento de Datos. En la opción
+                “Consulta de PQRSD” podrá verificar el estado de la respuesta.
+                En caso de que la solicitud de información sea de naturaleza de identidad reservada, deberá efectuar
+                el respectivo trámite ante la Procuraduría General de la Nación, haciendo clic en el siguiente
+                enlace:
+                <a href="www.procuraduria.gov.co">www.procuraduria.gov.co</a>
+            </p>
+
+            <button>Enviar</button>
+        </form>
+    </div>
+    <div style="height: 10vh;"></div>
+</div>

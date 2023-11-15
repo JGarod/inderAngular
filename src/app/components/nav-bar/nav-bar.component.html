@@ -1,0 +1,104 @@
+<div class="header" id="header">
+    <div class="gov-co" id="gov-co">
+        <span *ngIf="responsive" (click)="changeOpen()">
+            <mat-icon class="icon">menu</mat-icon>
+        </span>
+        <a href="https://www.gov.co"><img src="../../../assets/images/gov-co.png" alt=""></a>
+    </div>
+    <div *ngIf="!responsive" class="banner" id="banner">
+        <div class="img-container">
+            <img src="../../../assets/images/logo.png" alt="">
+        </div>
+        <div class="actions" id="actions">
+            <input type="text">
+            <span>
+                <mat-icon class="icon">search</mat-icon>
+            </span>
+            <div class="language" [matMenuTriggerFor]="menu">
+                <p>{{language}}</p>
+                <mat-icon class="icon">keyboard_arrow_down</mat-icon>
+            </div>
+            <mat-menu class="mat-menu" #menu="matMenu">
+                <button (click)="changeLanguage('ES')" mat-menu-item>ES</button>
+                <button (click)="changeLanguage('EN')" mat-menu-item>EN</button>
+            </mat-menu>
+        </div>
+    </div>
+    <responsive-nav-bar *ngIf="responsive" [open]="open" [changeOpen]="changeOpen"></responsive-nav-bar>
+    <div *ngIf="!responsive" class="menu" id="menu">
+        <img src="../../../assets/images/chair.png" alt="">
+        <div class="buttons">
+            <div class="boton">
+                <p routerLink="/intersantander">{{'menu.item1' | translate}}</p>
+            </div>
+            <div class="boton">
+                <p routerLink="/financiera">{{'menu.item2' | translate}}</p>
+            </div>
+            <div class="boton submenu" (click)="(currentOption === 3)?currentOption=0:currentOption = 3">
+                <p>{{'menu.item3' | translate}}</p>
+                <mat-icon class="icon">keyboard_arrow_down</mat-icon>
+            </div>
+            <div class="boton">
+                <p routerLink="/tramites">{{'menu.item4' | translate}}</p>
+            </div>
+            <div class="boton">
+                <p routerLink="/procesos-misionales">{{'menu.item5' | translate}}</p>
+            </div>
+            <div class="boton">
+                <p routerLink="/gestion">{{'menu.item6' | translate}}</p>
+            </div>
+            <div class="boton">
+                <p routerLink="/transparencia">{{'menu.item7' | translate}}</p>
+            </div>
+        </div>
+    </div>
+    <div [hidden]="currentOption === 0" class="opciones">
+        <div *ngIf="currentOption === 4" class="submenu">
+            <div>
+                <a href="http://visor.suit.gov.co/VisorSUIT/index.jsf?FI=51620"><p>{{'menu.Tramites.item1' | translate}}</p></a>
+            </div>
+            <hr>
+            <div>
+                <a href="http://visor.suit.gov.co/VisorSUIT/index.jsf?FI=51615"><p>{{'menu.Tramites.item2' | translate}}</p></a>
+            </div>
+            <hr>
+            <div>
+                <a href="http://visor.suit.gov.co/VisorSUIT/index.jsf?FI=51611"><p>{{'menu.Tramites.item3' | translate}}</p></a>
+            </div>
+            <hr>
+            <div>
+                <a href="http://visor.suit.gov.co/VisorSUIT/index.jsf?FI=16069"><p>{{'menu.Tramites.item4' | translate}}</p></a>
+            </div>
+            <hr>
+            <div>
+                <a href="http://visor.suit.gov.co/VisorSUIT/index.jsf?FI=51613"><p>{{'menu.Tramites.item5' | translate}}</p></a>
+            </div>
+            <hr>
+            <div>
+                <a href="http://visor.suit.gov.co/VisorSUIT/index.jsf?FI=51614"><p>{{'menu.Tramites.item6' | translate}}</p></a>
+            </div>
+            <hr>
+            <div>
+                <a href="http://visor.suit.gov.co/VisorSUIT/index.jsf?FI=16070"><p>{{'menu.Tramites.item7' | translate}}</p></a>
+            </div>
+        </div>
+        <div style="width: 40vw;" *ngIf="currentOption === 3" class="submenu">
+            <div>
+                <a (click)="currentOption=0" href="https://indersantander.red1.holatienda.com/pqrsd/">{{'menu.PQR.item1' | translate}}</a>
+            </div>
+            <hr>
+            <div>
+                <a (click)="currentOption=0" href="https://indersantander.red1.holatienda.com/denuncia-anonima/">{{'menu.PQR.item2' | translate}}</a>
+            </div>
+            <hr>
+            <div>
+                <a (click)="currentOption=0" href="https://indersantander.red1.holatienda.com/consultar-estado/">{{'menu.PQR.item3' | translate}}</a>
+            </div>
+            <hr>
+        </div>
+        <div class="ilustracion">
+            <img *ngIf="currentOption === 3" src="../../../assets/images/pqrs.jpg" alt="">
+            <img *ngIf="currentOption === 4" src="../../../assets/images/tramites.png" alt="">
+        </div>
+    </div>
+</div>

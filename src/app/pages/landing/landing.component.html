@@ -1,0 +1,202 @@
+<div id="space" class="space">
+    hola
+</div>
+<div class="page-1">
+    <ngb-carousel class="carousel" [pauseOnHover]="true">
+        <ng-template ngbSlide *ngFor="let image of images">
+            <div class="wrapper">
+                <img [src]="image.src" alt="Random first slide">
+            </div>
+            <div class="carousel-caption">
+                <h3>{{ image.title }}</h3>
+                <p>{{ image.short }}</p>
+            </div>
+        </ng-template>
+    </ngb-carousel>
+</div>
+<div class="page-2">
+    <iframe width="100%" height="480" src="https://www.youtube.com/embed/q3bxXh8aalw"
+        title="¿Qué es el INDER de Medellín? Conoce nuestro instituto" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    <iframe width="100%" height="480" src="https://www.youtube.com/embed/q3bxXh8aalw"
+        title="¿Qué es el INDER de Medellín? Conoce nuestro instituto" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+</div>
+<div class="page-3">
+    <div class="header">
+        <div class="separador">
+            <div class="hr1"></div>
+            <div class="hr2"></div>
+            <div class="hr3"></div>
+        </div>
+        <div class="content">
+            <div class="texto">
+                <p class="titulo">{{'pages.landing.noticias' | translate}}</p>
+                <p class="description">{{'pages.landing.noticiasDescription' | translate}}</p>
+            </div>
+            <img src="../../../assets/images/speed.png" alt="">
+        </div>
+        <div class="separador">
+            <div class="hr1"></div>
+            <div class="hr2"></div>
+            <div class="hr3"></div>
+        </div>
+    </div>
+    <div class="cuerpo" *ngFor="let item of infoGeneral">
+        <div class="section">
+            <div class="imagen">
+                <img class="marco" src="../../../assets/images/marco-amarillo.png" alt="">
+                <img class="persona" src="{{item.img.source_url}}" alt="">
+            </div>
+            <div class="texto">
+                <a href="{{item.info.guid.rendered}}">
+                    <p [innerHTML]="item.info.title.rendered"></p>
+                </a>
+                <span [innerHTML]="item.info.excerpt.rendered"></span>
+                <div class="separador">
+                    <div class="hr1"></div>
+                    <div class="hr2"></div>
+                    <div class="hr3"></div>
+                </div>
+            </div>
+            <div class="tweet">
+                <blockquote class="twitter-tweet" data-dnt="true">
+                    <p lang="es" dir="ltr">😎 Es la marca más grande en venta de autos nuevos en México, por eso quiso
+                        traer un de sus tecnologías más modernas en motores para que el consumidor tenga acceso al
+                        futuro electrificado de la marca a precios competitivos con <a
+                            href="https://twitter.com/hashtag/Nissan?src=hash&amp;ref_src=twsrc%5Etfw">#Nissan</a> <a
+                            href="https://twitter.com/hashtag/Kicks?src=hash&amp;ref_src=twsrc%5Etfw">#Kicks</a>
+                        e-POWER.<a
+                            href="https://twitter.com/hashtag/EstoEsNissan?src=hash&amp;ref_src=twsrc%5Etfw">#EstoEsNissan</a>
+                        <a
+                            href="https://twitter.com/hashtag/NISSANePOWER?src=hash&amp;ref_src=twsrc%5Etfw">#NISSANePOWER</a>
+                        <a href="https://t.co/HQORqkwU1c">pic.twitter.com/HQORqkwU1c</a>
+                    </p>&mdash; Alonso Maldonado
+                    (@Lonso0) <a
+                        href="https://twitter.com/Lonso0/status/1584900083853668352?ref_src=twsrc%5Etfw">October 25,
+                        2022</a>
+                </blockquote>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
+        <!-- <div class="section">
+            <div class="imagen">
+                <img class="marco" src="../../../assets/images/marco-green.png" alt="">
+                <img class="persona" src="../../../assets/images/persona.png" alt="">
+            </div>
+            <div class="texto">
+                <p>TEXTO</p>
+                <button style="
+                background-image: linear-gradient(to right, white, green);
+                border-bottom: 1vh solid green; border-top: 1px solid green;
+                border-left: 1px solid green;
+                border-right: 1px solid green;
+                color: black;">Descargar archivo</button>
+                <div class="separador">
+                    <div class="hr1"></div>
+                    <div class="hr2"></div>
+                    <div class="hr3"></div>
+                </div>
+            </div>
+            <div class="tweet">
+                <blockquote class="twitter-tweet">
+                    <p lang="es" dir="ltr"><a
+                            href="https://twitter.com/hashtag/EstoEsNissan?src=hash&amp;ref_src=twsrc%5Etfw">#EstoEsNissan</a>
+                        trae una energía eléctrica que te hará sentir vivo ⚡.Únete y sé parte de esta nueva rebelión que
+                        cambiará tu vida <a
+                            href="https://twitter.com/hashtag/NissanePower?src=hash&amp;ref_src=twsrc%5Etfw">#NissanePower</a>
+                    </p>&mdash; Nissan Colombia (@NissanColombia) <a
+                        href="https://twitter.com/NissanColombia/status/1583498822646366210?ref_src=twsrc%5Etfw">October
+                        21, 2022</a>
+                </blockquote>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
+        <div class="section">
+            <div class="imagen">
+                <img class="marco" src="../../../assets/images/marco-red.png" alt="">
+                <img class="persona" src="../../../assets/images/persona.png" alt="">
+            </div>
+            <div class="texto">
+                <p>TEXTO</p>
+                <button style="
+                background-image: linear-gradient(to right, white, red);
+                border-bottom: 1vh solid red; border-top: 1px solid red;
+                border-left: 1px solid red;
+                border-right: 1px solid red;
+                color: white;">Descargar archivo</button>
+                <div class="separador">
+                    <div class="hr1"></div>
+                    <div class="hr2"></div>
+                    <div class="hr3"></div>
+                </div>
+            </div>
+            <div class="tweet">
+                <blockquote class="twitter-tweet">
+                    <p lang="es" dir="ltr"><a
+                            href="https://twitter.com/hashtag/EstoEsNissan?src=hash&amp;ref_src=twsrc%5Etfw">#EstoEsNissan</a>
+                        trae una energía eléctrica que te hará sentir vivo ⚡.Únete y sé parte de esta nueva rebelión que
+                        cambiará tu vida <a
+                            href="https://twitter.com/hashtag/NissanePower?src=hash&amp;ref_src=twsrc%5Etfw">#NissanePower</a>
+                    </p>&mdash; Nissan Colombia (@NissanColombia) <a
+                        href="https://twitter.com/NissanColombia/status/1583498822646366210?ref_src=twsrc%5Etfw">October
+                        21, 2022</a>
+                </blockquote>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
+        <div class="section">
+            <div class="imagen">
+                <img class="marco" src="../../../assets/images/marco-black.png" alt="">
+                <img class="persona" src="../../../assets/images/persona.png" alt="">
+            </div>
+            <div class="texto">
+                <p>TEXTO</p>
+                <button style="
+                background-image: linear-gradient(to right, white, black);
+                border-bottom: 1vh solid black; border-top: 1px solid black;
+                border-left: 1px solid black;
+                border-right: 1px solid black;
+                color: white;
+                ">Descargar archivo</button>
+                <div class="separador">
+                    <div class="hr1"></div>
+                    <div class="hr2"></div>
+                    <div class="hr3"></div>
+                </div>
+            </div>
+            <div class="tweet">
+                <ngx-tweet tweetId="1587761784122970112"></ngx-tweet>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div> -->
+    </div>
+    <div class="separador">
+        <div class="hr1"></div>
+        <div class="hr2"></div>
+        <div class="hr3"></div>
+    </div>
+    <mat-paginator class="paginator" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
+        aria-label="Select page of periodic elements">
+    </mat-paginator>
+    <p class="enlaces-interes-titulo">Enlaces de interés</p>
+    <div class="separador">
+        <div class="hr1"></div>
+        <div class="hr2"></div>
+        <div class="hr3"></div>
+    </div>
+    <div class="enlaces-interes">
+        <img src="../../../assets/images/contraloria.png" alt="">
+        <img src="../../../assets/images/funcion-publica.png" alt="">
+        <img src="../../../assets/images/otro.png" alt="">
+        <img src="../../../assets/images/republica-colombia.png" alt="">
+        <img src="../../../assets/images/Procuraduria.png" alt="">
+    </div>
+    <div class="separador">
+        <div class="hr1"></div>
+        <div class="hr2"></div>
+        <div class="hr3"></div>
+    </div>
+</div>

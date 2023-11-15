@@ -1,0 +1,62 @@
+<div id="space" class="space">
+    hola
+</div>
+<div class="content">
+    <div class="fondo">
+        <div class="imagen"></div>
+        <div class="negro"></div>
+        <div class="descripcion">
+            <h1>Denuncia anonima</h1>
+        </div>
+    </div>
+    <div class="contenido">
+        <div class="breadcrump">
+            <a routerLink="..">Inicio</a>
+            <p>></p>
+            <p>Denuncia anonima</p>
+        </div>
+        <form>
+            <p>Los campos marcados con <strong style="color:red;">*</strong> son obligatorios</p>
+            <p>Al diligenciar este formulario usted está aceptando las condiciones para denuncias anónimas de acuerdo
+                con
+                el artículo 38 de la Ley 190 de 1995, el artículo 69 de la Ley 734 de 2002 y el artículo 81 de la Ley
+                962
+                de 2005.
+            </p>
+            <br>
+            <label>Seleccione la opción PQRSD</label>
+            <br>
+            <mat-form-field appearance="outline">
+                <mat-label>Seleccione la opción</mat-label>
+                <mat-select>
+                    <mat-option>Petición</mat-option>
+                    <mat-option>Queja/Reclamo</mat-option>
+                    <mat-option>Solicitud de información</mat-option>
+                    <mat-option>Denuncia</mat-option>
+                    <mat-option>Sugerencia/propuesta</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <label>Asunto del PQRSD</label>
+            <br>
+            <mat-form-field appearance="outline">
+                <input matInput type="text" placeholder="Asunto del PQRSD">
+            </mat-form-field>
+            <label>Objeto del PQRSD <strong style="color:red;">*</strong></label>
+            <br>
+            <mat-form-field appearance="outline">
+                <textarea matInput type="text" placeholder="País" cols="4"></textarea>
+            </mat-form-field>
+            <p>Al hacer clic en el botón enviar, usted acepta la remisión de la PQRS a la entidad Indersantander. Sus
+                datos serán recolectados y tratados conforme a la Política de Tratamiento de Datos. En la opción
+                “Consulta de PQRSD” podrá verificar el estado de la respuesta.
+                En caso de que la solicitud de información sea de naturaleza de identidad reservada, deberá efectuar
+                el respectivo trámite ante la Procuraduría General de la Nación, haciendo clic en el siguiente
+                enlace:
+                <a href="www.procuraduria.gov.co">www.procuraduria.gov.co</a>
+            </p>
+
+            <button>Enviar</button>
+        </form>
+    </div>
+    <div style="height: 10vh;"></div>
+</div>

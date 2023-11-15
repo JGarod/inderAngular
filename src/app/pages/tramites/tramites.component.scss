@@ -1,0 +1,103 @@
+.space {
+    width: 100%;
+    height: 28vh;
+}
+
+.content {
+    background-color: white;
+    height: auto;
+
+    .fondo {
+        width: 100%;
+        height: 40vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: black;
+
+        .imagen {
+            width: 100%;
+            height: 100%;
+            background-image: url("https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGFyJUMzJUFEcyUyQyUyMGZyYW5jaWF8ZW58MHx8MHx8fDA%3D&w=1000&q=80");
+            background-repeat: no-repeat;
+        }
+
+        .descripcion {
+            position: absolute;
+            background-color: rgb(51, 109, 176);
+            width: 40%;
+            height: 30vh;
+            align-self: flex-end;
+            justify-self: center;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 25px;
+
+            h1 {
+                text-align: center;
+                font-size: 35px;
+                font-weight: bold;
+                color: black;
+            }
+
+            p {
+                color: black;
+                text-align: justify;
+                font-weight: 400;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .contenido {
+        width: 100%;
+        padding-inline: 20vw;
+        padding-top: 30px;
+
+        .breadcrump {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14;
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        .tramites{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 60px;
+            column-gap: 40px;
+            .tramite{
+                display: grid;
+                grid-template-columns: auto 1fr;
+                column-gap: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+                text-align: justify;
+
+                &:hover{
+                    cursor: pointer;
+                }
+
+                .icon{
+                    font-size: 40px;
+                    width: 40px;
+                }
+            }
+        }
+    }
+
+    .valores {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+}
